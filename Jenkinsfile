@@ -17,7 +17,8 @@ pipeline {
       stage('pull') {
         steps {
           sh 'echo "git pull stage"'
-          git branch: 'main', url: 'https://github.com/piotrswiecik/pandas-frontend.git'
+        //   git branch: 'main', url: 'https://github.com/piotrswiecik/pandas-frontend.git'
+        checkout scm
           sh 'ls -al'
         }
       }
